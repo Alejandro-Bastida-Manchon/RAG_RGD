@@ -1,0 +1,22 @@
+/* ELIMINÉ EL @IMPORT DE GOOGLE FONTS */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    /* CAMBIÉ ESTA LÍNEA 👇 */
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  /* Scrollbar más fina y discreta (puedes dejar esto igual) */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-gray-200 rounded-full; }
+}

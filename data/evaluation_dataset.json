@@ -1,0 +1,74 @@
+[
+  {
+    "question": "¿Qué es la protección de datos por defecto según el artículo 25 del RGPD?",
+    "ground_truth": "El responsable del tratamiento debe aplicar medidas técnicas y organizativas para garantizar que, por defecto, solo se traten los datos personales necesarios para cada fin específico. Esto aplica a la cantidad de datos recogidos, la extensión del tratamiento, el plazo de conservación y la accesibilidad.",
+    "source_esperada": "RGPD",
+    "tipo": "single_doc"
+  },
+  {
+    "question": "¿Cuáles son las tres estrategias principales para implementar la protección de datos por defecto según la guía de la AEPD?",
+    "ground_truth": "Las tres estrategias son: Optimizar (analizar el tratamiento para minimizar datos recogidos, extensión, conservación y accesibilidad), Configurar (permitir que el tratamiento sea configurable mediante valores disponibles en aplicaciones y sistemas) y Restringir (garantizar que por defecto el tratamiento es lo más respetuoso posible con la privacidad).",
+    "source_esperada": "GUIA_PD_DEFECTO",
+    "tipo": "single_doc"
+  },
+  {
+    "question": "¿En qué casos es obligatorio designar un Delegado de Protección de Datos según el RGPD?",
+    "ground_truth": "Es obligatorio en tres casos: cuando el tratamiento lo lleve a cabo una autoridad u organismo público, cuando las actividades principales requieran una observación habitual y sistemática de interesados a gran escala, o cuando se traten a gran escala categorías especiales de datos.",
+    "source_esperada": "RGPD",
+    "tipo": "single_doc"
+  },
+  {
+    "question": "¿Qué plazo tiene el responsable para notificar una brecha de seguridad a la autoridad de control?",
+    "ground_truth": "El responsable debe notificar la violación de seguridad a la autoridad de control competente en un plazo máximo de 72 horas desde que tenga constancia de ella, siempre que sea posible.",
+    "source_esperada": "RGPD",
+    "tipo": "single_doc"
+  },
+  {
+    "question": "¿Cómo complementa la guía de la AEPD lo que establece el artículo 25 del RGPD sobre protección de datos por defecto?",
+    "ground_truth": "El artículo 25 del RGPD establece la obligación de aplicar medidas técnicas y organizativas para que por defecto solo se traten los datos necesarios en cuanto a cantidad, extensión, conservación y accesibilidad. La guía de la AEPD desarrolla esto en tres estrategias prácticas: optimizar el tratamiento analizándolo por fases, configurarlo mediante opciones de parámetros con valores por defecto restrictivos, y restringir por defecto al caso de uso más respetuoso con la privacidad.",
+    "source_esperada": "RGPD + GUIA_PD_DEFECTO",
+    "tipo": "multi_doc"
+  },
+  {
+    "question": "¿Qué dice el RGPD sobre el consentimiento de menores y cómo lo desarrolla la guía práctica de la AEPD?",
+    "ground_truth": "El RGPD establece que en servicios de la sociedad de la información el consentimiento solo es válido a partir de los 16 años, permitiendo a los estados fijar un mínimo de 13 años. La guía de la AEPD advierte que en la definición de casos de uso hay que tener en cuenta especialmente las necesidades de menores y colectivos vulnerables, y que no se puede denegar el acceso a un servicio por elegir una configuración más restrictiva de privacidad.",
+    "source_esperada": "RGPD + GUIA_AEPD",
+    "tipo": "multi_doc"
+  },
+  {
+    "question": "Según el RGPD y la guía para responsables de tratamiento, ¿qué obligaciones tiene el responsable respecto al Delegado de Protección de Datos?",
+    "ground_truth": "Según el RGPD, el responsable debe designar un DPD en los casos previstos, hacer pública su designación y datos de contacto, comunicarlo a las autoridades de supervisión, y garantizar su autonomía e independencia. La guía de la AEPD añade que debe relacionarse con el nivel superior de dirección, disponer de todos los recursos necesarios, y que la AEPD promueve un sistema de certificación de profesionales aunque no sea requisito indispensable.",
+    "source_esperada": "RGPD + GUIA_AEPD",
+    "tipo": "multi_doc"
+  },
+  {
+    "question": "¿Cuánto es exactamente la multa por no designar un DPD cuando es obligatorio según el RGPD?",
+    "ground_truth": "El RGPD no establece una multa específica para este incumplimiento concreto. Las infracciones pueden sancionarse con multas de hasta 10 millones de euros o el 2% del volumen de negocio, o hasta 20 millones o el 4% dependiendo de la gravedad, pero no hay una cifra específica asignada a la no designación del DPD.",
+    "source_esperada": "RGPD",
+    "tipo": "trampa_alucinacion"
+  },
+  {
+    "question": "¿Qué algoritmos de cifrado específicos recomienda el RGPD para proteger los datos personales?",
+    "ground_truth": "El RGPD no especifica algoritmos de cifrado concretos. Menciona el cifrado como ejemplo de medida técnica apropiada pero no prescribe algoritmos específicos, dejando al responsable la elección según el estado de la técnica y el análisis de riesgos.",
+    "source_esperada": "RGPD",
+    "tipo": "trampa_alucinacion"
+  },
+  {
+    "question": "¿Existe en el RGPD un formulario estándar obligatorio para notificar brechas de seguridad?",
+    "ground_truth": "No existe un formulario estándar obligatorio en el RGPD. La guía de la AEPD menciona que el Grupo del Artículo 29 preparará un formulario estandarizado a nivel europeo para ayudar a los responsables, pero no es un requisito legal obligatorio del Reglamento.",
+    "source_esperada": "GUIA_AEPD",
+    "tipo": "trampa_alucinacion"
+  },
+  {
+    "question": "¿Qué información mínima debe contener el registro de actividades de tratamiento?",
+    "ground_truth": "Debe incluir: nombre y datos de contacto del responsable o corresponsable y del DPD si existe, las finalidades del tratamiento, descripción de categorías de interesados y categorías de datos personales tratados, y las transferencias internacionales de datos.",
+    "source_esperada": "RGPD + GUIA_AEPD",
+    "tipo": "recuperacion_exacta"
+  },
+  {
+    "question": "¿Qué significa el principio de minimización de datos según el artículo 5 del RGPD?",
+    "ground_truth": "El principio de minimización establece que los datos personales deben ser adecuados, pertinentes y limitados a lo necesario en relación con los fines para los que son tratados.",
+    "source_esperada": "RGPD",
+    "tipo": "recuperacion_exacta"
+  }
+]
